@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Load from "@/assets/images/loading_cart.gif";
+import Load from "@/assets/images/loader.gif";
 
 const Loading = () => {
   return (
