@@ -7,6 +7,7 @@ import Head from "next/head";
 import Login from "@/components/Login";
 import SideBar from "@/components/sideBar/SideBar";
 import ToolkitProvider from "@/components/ToolkitProvider";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,9 +35,14 @@ export default async function RootLayout({
           {!session && <Login />}
           {session && (
             <ToolkitProvider>
-              <div className="flex h-screen">
-                <SideBar />
-                <div className="bg-[#343541] flex-1">{children}</div>
+              <div className="flex">
+                <div className="">
+                  <SideBar />
+                </div>
+                <div className="bg-[#343541] flex-1 overflow-hidden h-screen">
+                  <Navbar />
+                  {children}
+                </div>
               </div>
             </ToolkitProvider>
           )}
