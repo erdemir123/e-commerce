@@ -1,5 +1,6 @@
 .menuIsSmall{
-    color:red;
-    width:300px;
-    transition: width 2s 
+    width:100px;
+    display:flex;
+    justify-content:center;
+    transition: width 1000ms
 }

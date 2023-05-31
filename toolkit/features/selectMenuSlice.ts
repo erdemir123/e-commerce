@@ -3,7 +3,7 @@ interface initial {
     menuSize: boolean;
 }
 const initialState: initial = {
-  menuSize: true,
+  menuSize: false,
 };
 
 const selectMenuSlice = createSlice({
