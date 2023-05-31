@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["is3-ssl.mzstatic.com", "encrypted-tbn0.gstatic.com"],
+    domains: ["is3-ssl.mzstatic.com", "encrypted-tbn0.gstatic.com","fakestoreapi.com"]
   },
 };
 

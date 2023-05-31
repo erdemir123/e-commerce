@@ -34,6 +34,7 @@ export default function SideBar() {
         {menuSize || (
           <>
             <Image
+            style={{ width: "auto", height: "200px" }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSofGI77Cz3tXbKTReFuM-Gqlp88zXT4Rgm6A&usqp=CAU"
               width={300}
               height={300}
