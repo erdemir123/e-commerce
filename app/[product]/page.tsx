@@ -5,7 +5,12 @@ interface ıProduct {
 interface ıParams {
   params: ıProduct;
 }
-export default function page({ params }: ıParams) {
+
+async function delay(ms: number) {
+  return new Promise((resolve) => setInterval(resolve, ms));
+}
+export default async function page({ params }: ıParams) {
+  await delay(1000);
   const { product } = params;
   const newProduct = product.replace("%20", " ");
   return <div>{newProduct}</div>;

@@ -32,12 +32,14 @@ export default async function RootLayout({
       <body className={inter.className}>
         <Providers session={session}>
           {!session && <Login />}
-          <ToolkitProvider>
-            <div className="flex h-screen">
-              <SideBar />
-              <div className="bg-[#343541] flex-1">{children}</div>
-            </div>
-          </ToolkitProvider>
+          {session && (
+            <ToolkitProvider>
+              <div className="flex h-screen">
+                <SideBar />
+                <div className="bg-[#343541] flex-1">{children}</div>
+              </div>
+            </ToolkitProvider>
+          )}
         </Providers>
       </body>
     </html>

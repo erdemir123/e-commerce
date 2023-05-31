@@ -46,12 +46,13 @@ export default function SideBar() {
           </>
         )}
         <div className="mt-10">
-          {tabs.map((tab: any) => (
+          {tabs.map((tab: any,index:number) => (
             <div
               className={`${
                 menuSize ? "text-4xl" : "text-2xl"
               } flex items-center gap-2  py-2 px-3 uppercase font-bold cursor-pointer border-b border-slate-500 mt-3 hover:bg-slate-200 transition-width duration-[1000]`}
               onClick={()=>router.push(`${tab.name}`)}
+              key={index}
             >
               <tab.icon />
               {menuSize || <div>{tab.name}</div>}
