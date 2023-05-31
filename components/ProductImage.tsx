@@ -20,8 +20,8 @@ function ProductImage({ product, fill }: Props) {
           height={200}
           className={`object-contain duration-700 ease-in-out group-hover:opacity-75 ${
             loading
-              ? "scale-90 blur-lg grayscale"
-              : "scale-100 blur-0 grayscale-0"
+              ? "scale-80 blur-sm "
+              : "scale-100 blur-0 "
           }}`}
           onLoadingComplete={() => setLoading(false)}
         />
