@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth/next";
 
 import Head from "next/head";
 import Login from "@/components/Login";
-import SideBar from "@/components/SideBar";
+import SideBar from "@/components/sideBar/SideBar";
 import ToolkitProvider from "@/components/ToolkitProvider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,10 +33,8 @@ export default async function RootLayout({
         <Providers session={session}>
           {!session && <Login />}
           <ToolkitProvider>
-            <div className="flex">
-              <div className="bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[20rem]">
-                <SideBar />
-              </div>
+            <div className="flex h-screen">
+              <SideBar />
               <div className="bg-[#343541] flex-1">{children}</div>
             </div>
           </ToolkitProvider>

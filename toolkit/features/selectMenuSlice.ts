@@ -1,21 +1,21 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 interface initial {
-    menuSize: "smallMenu" | "bigMenu";
+    menuSize: boolean;
 }
 const initialState: initial = {
-  menuSize: "smallMenu",
+  menuSize: true,
 };
 
 const selectMenuSlice = createSlice({
   name: "selectMenu",
   initialState,
   reducers: {
-    smallMenu: (state, action: PayloadAction<"smallMenu" | "bigMenu">) => {
+    isMenu: (state, action: PayloadAction<boolean>) => {
       state.menuSize = action.payload;
     },
   },
 });
 
-export const { smallMenu } = selectMenuSlice.actions;
+export const { isMenu } = selectMenuSlice.actions;
 
 export default selectMenuSlice.reducer;
