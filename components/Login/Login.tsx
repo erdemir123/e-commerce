@@ -16,6 +16,7 @@ const Login = () => {
       <button
         onClick={() => signIn("google")}
         className="text-white font-bold text-3xl animate-pulse mt-20"
+        id="LoginButton"
       >
         Login To See Discounts and Buy
       </button>

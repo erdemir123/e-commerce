@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { getServerSession } from "next-auth/next";
 
 import Head from "next/head";
-import Login from "@/components/Login";
+import Login from "@/components/Login/Login";
 import SideBar from "@/components/sideBar/SideBar";
 import ToolkitProvider from "@/components/ToolkitProvider";
 import Navbar from "@/components/Navbar";

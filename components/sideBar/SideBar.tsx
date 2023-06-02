@@ -20,7 +20,7 @@ export default function SideBar() {
     <div
       className={`${
         menuSize ? `${styles.menuIsSmall}` : "w-[400px]"
-      } relative  flex justify-center transition-all duration-1500 bg-slate-200 text-slate-950 shadow-lg shadow-slate-900 h-screen`}
+      } sidebar relative  flex justify-center transition-all duration-1500 bg-slate-200 text-slate-950 shadow-lg shadow-slate-900 h-screen`}
     >
       <div
         onClick={() => {
