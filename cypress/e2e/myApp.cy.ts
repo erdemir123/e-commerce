@@ -1,10 +1,11 @@
 describe("template spec", () => {
   it("passes", () => {
+    cy.viewport("macbook-15");
     cy.visit("");
     cy.contains("Login To See Discounts and Buy").click();
 
-    cy.get("button").click()
-    cy.request('GET', '/api/auth/signin/google').then((response) => {
+    cy.get("button").scrollIntoView().click();
+    cy.request("GET", "/api/auth/signin/google").then((response) => {
       expect(response.status).to.equal(200);
     });
     cy.get("#login").should(

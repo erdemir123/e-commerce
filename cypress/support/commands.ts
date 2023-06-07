@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+
+
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -35,3 +37,22 @@
 //     }
 //   }
 // }
+declare namespace Cypress {
+  interface Chainable {
+    login(username: string, password: string):Chainable<void>
+    giris(websiteName:string):Chainable<void>;
+    attachFile(filePAth:any):Chainable<void>
+    
+  }
+}
+// Login komutu
+Cypress.Commands.add("login", (username: string, password: string) => {
+  cy.get("#user-name").should("be.visible").clear().type(username);
+  cy.get("#password").should("be.visible").clear().type(password);
+  cy.get("#login-button").click(); //click btn
+      cy.get(".app_logo")
+});
+
+Cypress.Commands.add("giris",(websiteName:string)=>{
+    cy.visit(websiteName)
+})

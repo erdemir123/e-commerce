@@ -7,3 +7,7 @@ type Product = {
     image: string;
     rating: { rate: number; count: number };
   };
+  type User={
+    username:string,
+    password:string
+  }

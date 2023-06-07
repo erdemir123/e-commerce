@@ -14,7 +14,21 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+import "cypress-file-upload";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+///xhr gizleme
+const app: any = window.top;
+
+if (!app.document.head.querySelector("[data-hide-command-log-request]")) {
+  const style: HTMLStyleElement = app.document.createElement("style");
+  style.innerHTML =
+    ".command-name-request, .command-name-xhr { display: none }";
+  style.setAttribute("data-hide-command-log-request", "");
+
+  app.document.head.appendChild(style);
+}
