@@ -19,4 +19,8 @@ describe("template spec", () => {
       "/_next/image?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSofGI77Cz3tXbKTReFuM-Gqlp88zXT4Rgm6A%26usqp%3DCAU&w=640&q=75"
     );
   });
+  it("",()=>{
+    cy.visit("")
+    cy.get("button#LoginButton").trigger("mouseover").should("have.css","cursor","pointer")
+  })
 });

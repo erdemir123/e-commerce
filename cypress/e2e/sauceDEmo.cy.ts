@@ -28,4 +28,18 @@ describe("sauceDemo Login sayfası test", () => {
       cy.login(user.username, user.password);
     });
   });
+  it("başarılı",()=>{
+    cy.fixture("customData").as("custom"),
+    cy.get("@custom").then((custom:any)=>{
+      cy.giris(custom.websiteName);
+      cy.login(custom.username,custom.password)
+    })
+  })
+  it("başarısız",()=>{
+    cy.fixture("customData").as("custom"),
+    cy.get("@custom").then((custom:any)=>{
+      cy.giris(custom.websiteName);
+      cy.login(custom.usernameFake,custom.password)
+    })
+  })
 });

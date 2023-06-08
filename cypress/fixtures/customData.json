@@ -1,0 +1,8 @@
+{
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "usernameFake": "standard_user",
+    "passwordFake": "secret",
+    "websiteName": "https://www.saucedemo.com/v1/"
+    
+  }
